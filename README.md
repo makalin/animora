@@ -4,6 +4,8 @@
 
 Animora CSS is a modern, comprehensive CSS framework designed for building responsive, visually appealing, and animated web interfaces. It provides a robust set of utilities, components, and animations to streamline web development.
 
+Live Preview: https://makalin.github.io/animora/
+
 ## Features
 
 - 🎨 **Color System** – Extended palette with light/dark support
