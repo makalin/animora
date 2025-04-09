@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animora Demo</title>
+  <link rel="stylesheet" href="animora.min.css?v=1.1" />
+</head>
+<body class="bg-gray-100 text-gray-900 p-lg transition-normal">
+
+  <!-- Header Section -->
+  <header class="container mx-auto mb-lg">
+    <div class="flex items-center justify-between">
+      <h1 class="text-3xl font-bold text-primary anim-fade-in">Welcome to Animora</h1>
+      <button id="theme-toggle" class="btn btn-outline-primary px-md py-sm tran hover:scale-105">
+        Toggle Dark Mode
+      </button>
+    </div>
+  </header>
+
+  <!-- Card Example -->
+  <section class="container mx-auto mb-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+      <div class="card anim-slide-up">
+        <div class="card-header bg-gradient-primary text-white">
+          <h2 class="text-xl font-semibold m-0">Card Title</h2>
+        </div>
+        <div class="card-body">
+          <p class="text-gray-700 mb-md">This card animates on load and transitions on hover.</p>
+          <button class="btn btn-primary anim-pulse">Click Me</button>
+        </div>
+      </div>
+      <div class="card anim-slide-up delay-300">
+        <div class="card-body glass">
+          <p class="text-gray-700">This card uses the glass effect with a subtle blur.</p>
+          <div class="badge badge-success mt-sm">Success</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buttons Section -->
+  <section class="container mx-auto mb-xl">
+    <h2 class="text-2xl font-semibold text-secondary mb-md anim-slide-down">Button Variants</h2>
+    <div class="flex flex-wrap gap-md">
+      <button class="btn btn-primary tran hover:bg-primary-dark anim-bounce">Primary</button>
+      <button class="btn btn-secondary tran hover:bg-secondary-dark anim-float">Secondary</button>
+      <button class="btn btn-outline-danger tran hover:bg-danger hover:text-white anim-heartbeat">Danger</button>
+      <button class="btn btn-success tran hover:bg-success-dark anim-spin">Success</button>
+    </div>
+  </section>
+
+  <!-- Alerts Section -->
+  <section class="container mx-auto mb-xl">
+    <h2 class="text-2xl font-semibold text-info mb-md anim-slide-right">Alerts</h2>
+    <div class="flex flex-col gap-md">
+      <div class="alert alert-success anim-fade-in">Success! Operation completed.</div>
+      <div class="alert alert-warning anim-fade-in delay-300">Warning: Proceed with caution.</div>
+      <div class="alert alert-danger anim-fade-in delay-500">Error: Something went wrong.</div>
+    </div>
+  </section>
+
+  <!-- Form Example -->
+  <section class="container mx-auto mb-xl">
+    <h2 class="text-2xl font-semibold text-primary mb-md anim-slide-left">Form Example</h2>
+    <form class="card p-md anim-scale-in">
+      <div class="form-group">
+        <label class="form-label" for="name">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email">
+      </div>
+      <button type="submit" class="btn btn-primary mt-md tran hover:bg-primary-dark">Submit</button>
+    </form>
+  </section>
+
+  <!-- Typing Effect -->
+  <section class="container mx-auto mb-xl">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-md anim-jello">Typing Effect</h2>
+    <p class="typing-effect text-lg">This text types out automatically!</p>
+  </section>
+
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggleButton.textContent = body.classList.contains('dark-mode') 
+        ? 'Toggle Light Mode' 
+        : 'Toggle Dark Mode';
+    });
+
+    // Check for user's preferred color scheme
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      body.classList.add('dark-mode');
+      toggleButton.textContent = 'Toggle Light Mode';
+    }
+  </script>
+
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d79738fbf14584',t:'MTc0NDE3NjM5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+</body>
+</html>
