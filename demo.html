@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animora CSS Framework Demo</title>
+  <link rel="stylesheet" href="animora.min.css">
+  <style>
+    body {
+      font-family: var(--font-family-sans);
+      background-color: var(--color-gray-100);
+    }
+    
+    .demo-section {
+      margin-bottom: var(--space-xl);
+    }
+    
+    .theme-toggle {
+      position: fixed;
+      top: var(--space-md);
+      right: var(--space-md);
+      z-index: 100;
+    }
+  </style>
+</head>
+<body class="custom-scrollbar">
+  <button id="theme-toggle" class="btn btn-primary theme-toggle shadow-md rounded-full p-sm">
+    Toggle Dark Mode
+  </button>
+
+  <div class="container py-xl">
+    <header class="text-center mb-xl">
+      <h1 class="text-5xl font-bold mb-md text-primary anim-fade-in">
+        <span class="text-shadow-neon">Animora</span> CSS
+      </h1>
+      <p class="text-xl text-gray-700 mb-lg anim-slide-up delay-300">A powerful utility-first CSS framework with modern animations</p>
+      <div class="flex justify-center gap-md anim-fade-in delay-500">
+        <button class="btn btn-primary shadow-md hover:scale-105 active:scale-95 tran">Get Started</button>
+        <button class="btn btn-outline-primary shadow-md hover:scale-105 active:scale-95 tran">Documentation</button>
+      </div>
+    </header>
+
+    <div class="demo-section">
+      <h2 class="text-2xl font-bold mb-md">Animation Showcase</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+        <div class="card p-md text-center anim-fade-in">
+          <div class="bg-primary text-white p-lg rounded-lg mb-sm anim-pulse">Pulse</div>
+          <p class="text-gray-700">The pulse animation gently scales an element up and down</p>
+        </div>
+        <div class="card p-md text-center anim-fade-in delay-300">
+          <div class="bg-secondary text-white p-lg rounded-lg mb-sm anim-float">Float</div>
+          <p class="text-gray-700">The float animation creates a gentle hovering effect</p>
+        </div>
+        <div class="card p-md text-center anim-fade-in delay-500">
+          <div class="bg-success text-white p-lg rounded-lg mb-sm anim-shake">Shake</div>
+          <p class="text-gray-700">Click to see the shake animation in action</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="text-2xl font-bold mb-md">Special Effects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+        <div class="glass p-lg rounded-lg text-center hover:shadow-xl tran">
+          <h3 class="text-xl font-bold mb-sm">Glass Morphism</h3>
+          <p>Modern glass effect with backdrop blur</p>
+        </div>
+        <div class="morph bg-gradient-primary p-lg rounded-lg text-center text-white hover:shadow-xl tran">
+          <h3 class="text-xl font-bold mb-sm">Morphing Borders</h3>
+          <p>Animated organic border shapes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="text-2xl font-bold mb-md">Interactive Components</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+        <div class="card ripple hover:shadow-lg tran">
+          <div class="card-header bg-gray-100">
+            <h3 class="font-bold">Ripple Effect</h3>
+          </div>
+          <div class="card-body">
+            <p class="mb-sm">Click anywhere on this card to see the ripple effect</p>
+            <button class="btn btn-primary w-full">Click Me</button>
+          </div>
+        </div>
+        
+        <div class="card hover:shadow-lg tran">
+          <div class="card-header bg-gray-100">
+            <h3 class="font-bold">Typing Effect</h3>
+          </div>
+          <div class="card-body">
+            <span class="typing-effect">This text is typing itself...</span>
+          </div>
+        </div>
+        
+        <div class="card hover:shadow-lg tran">
+          <div class="card-header bg-gray-100">
+            <h3 class="font-bold">Hover Transforms</h3>
+          </div>
+          <div class="card-body flex flex-col gap-sm">
+            <button class="btn btn-secondary hover:scale-110 active:scale-90 tran">Scale</button>
+            <div class="bg-info text-white p-sm rounded text-center hover:rotate-45 tran">Rotate Me</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="text-2xl font-bold mb-md">Alert Components</h2>
+      <div class="flex flex-col gap-md">
+        <div class="alert alert-success anim-slide-right">
+          <h4 class="font-bold mb-xs">Success Alert</h4>
+          <p>This operation was completed successfully.</p>
+        </div>
+        <div class="alert alert-warning anim-slide-right delay-300">
+          <h4 class="font-bold mb-xs">Warning Alert</h4>
+          <p>Please review the information before proceeding.</p>
+        </div>
+        <div class="alert alert-danger anim-slide-right delay-500">
+          <h4 class="font-bold mb-xs">Danger Alert</h4>
+          <p>An error occurred while processing your request.</p>
+        </div>
+        <div class="alert alert-info anim-slide-right delay-700">
+          <h4 class="font-bold mb-xs">Info Alert</h4>
+          <p>Your session will expire in 5 minutes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2 class="text-2xl font-bold mb-md">Scroll Reveal Elements</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+        <div class="card p-md scroll-reveal">
+          <div class="bg-primary-light text-primary-dark p-md rounded-lg text-center font-bold">
+            Card 1
+          </div>
+        </div>
+        <div class="card p-md scroll-reveal">
+          <div class="bg-secondary-light text-secondary-dark p-md rounded-lg text-center font-bold">
+            Card 2
+          </div>
+        </div>
+        <div class="card p-md scroll-reveal">
+          <div class="bg-success-light text-success-dark p-md rounded-lg text-center font-bold">
+            Card 3
+          </div>
+        </div>
+        <div class="card p-md scroll-reveal">
+          <div class="bg-warning-light text-warning-dark p-md rounded-lg text-center font-bold">
+            Card 4
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-gray-900 text-white py-lg mt-xl">
+    <div class="container">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div>
+          <h2 class="text-2xl font-bold mb-sm">Animora CSS</h2>
+          <p class="text-gray-400">A modern utility-first CSS framework</p>
+        </div>
+        <div class="flex gap-md mt-md md:mt-0">
+          <button class="btn btn-outline text-white border-white hover:bg-white hover:text-gray-900 tran">GitHub</button>
+          <button class="btn btn-outline text-white border-white hover:bg-white hover:text-gray-900 tran">Documentation</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Activate scroll reveal elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      scrollRevealElements.forEach(element => {
+        observer.observe(element);
+      });
+      
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+      });
+      
+      // Add click event for shake animation demo
+      const shakeElement = document.querySelector('.anim-shake');
+      shakeElement.addEventListener('click', function() {
+        this.classList.remove('anim-shake');
+        setTimeout(() => {
+          this.classList.add('anim-shake');
+        }, 10);
+      });
+      
+      // Add ripple effect for ripple elements
+      const rippleElements = document.querySelectorAll('.ripple');
+      rippleElements.forEach(element => {
+        element.addEventListener('click', function(e) {
+          const ripple = this;
+          ripple.classList.remove('ripple');
+          setTimeout(() => {
+            ripple.classList.add('ripple');
+          }, 10);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
